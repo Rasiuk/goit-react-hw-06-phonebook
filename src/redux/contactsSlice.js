@@ -11,7 +11,7 @@ const contactsSlice = createSlice({
         contact => contact.name === action.payload.name
       );
       if (existingContact) {
-        alert(`${existingContact} is already in contacts`);
+        alert(`${action.payload.name} is already in contacts`);
         return;
       }
       state.contacts.push(action.payload);
