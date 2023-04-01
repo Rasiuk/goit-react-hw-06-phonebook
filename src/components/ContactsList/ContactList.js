@@ -6,9 +6,9 @@ import { getFilter } from 'redux/filterSlice';
 
 export const ContactList = () => {
   const contacts = useSelector(getContacts);
-  console.log(contacts);
+
   const filteredQuery = useSelector(getFilter);
-  console.log(filteredQuery);
+
   const filteredContact = contacts.filter(contact =>
     contact.name.toLowerCase().includes(filteredQuery.toLowerCase())
   );
