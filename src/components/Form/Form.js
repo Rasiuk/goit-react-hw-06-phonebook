@@ -4,16 +4,12 @@ import { nanoid } from 'nanoid';
 import { Form, Field, Label, Section, Button } from './Form.styled';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
-// import * as Yup from 'yup';
-// import { nanoid } from 'nanoid';
+
 export const ContactForm = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  // const initialValues = {
-  //   name: '',
-  //   number: '',
-  // };
+
   const handleChange = evt => {
     const inputName = evt.target.name;
 
